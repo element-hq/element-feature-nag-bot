@@ -172,7 +172,7 @@ async function getNextPingDate(featureName: string, addedDate: Moment): Promise<
 }
 
 async function setNextPingDays(featureName: string, days: number) {
-    await client.setAccountData(`im.vector.ping.${featureName}`, {date: moment().add(days, 'days').toString()});
+    await client.setAccountData(`im.vector.ping.${featureName}`, {date: moment().add(days, 'days').format()});
 }
 
 async function getFeatureBlame(): Promise<any> {
