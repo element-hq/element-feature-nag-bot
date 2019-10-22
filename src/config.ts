@@ -22,6 +22,7 @@ interface IConfig {
     dataPath: string;
     githubToken: string;
     noticeRoom: string;
+    authorizedUsers: string[];
 }
 
 export default <IConfig>config;

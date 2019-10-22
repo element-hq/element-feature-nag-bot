@@ -12,3 +12,6 @@ noticeRoom: "#riot-dev:matrix.org"
 
 # Github API token from https://github.com/settings/tokens
 githubToken: ""
+
+# The user IDs of people who can run commands
+authorizedUsers: []

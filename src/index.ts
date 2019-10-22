@@ -86,6 +86,10 @@ async function onMessage(roomId: string, event: any) {
 }
 
 async function handleCommand(roomId: string, event: any) {
+    if (!config.authorizedUsers.includes(event['sender'])) {
+        return client.sendNotice(roomId, `Sorry ${event['sender']}, you don't have permission to run this command`);
+    }
+
     const args = event['content']['body'].split(' ');
 
     if (args.length > 0) {
