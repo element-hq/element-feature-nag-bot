@@ -1,0 +1,26 @@
+{
+  "name": "riot-feature-nag-bot",
+  "version": "0.0.1",
+  "description": "A Matrix bot that complains when riot-web features take too long",
+  "main": "lib/index.js",
+  "repository": "git@github.com:vector-im/riot-feature-nag-bot.git",
+  "author": "New Vector",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint --project ./tsconfig.json --type-check -t stylish",
+    "start:dev": "yarn build && node lib/index.js"
+  },
+  "dependencies": {
+    "config": "^3.2.3",
+    "js-yaml": "^3.13.1",
+    "matrix-bot-sdk": "^0.4.0-beta.8",
+    "moment": "^2.24.0",
+    "node-github-graphql": "^0.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "10",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  }
+}
