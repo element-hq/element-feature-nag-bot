@@ -7,13 +7,17 @@ Build with `docker build -t feature-nag-bot .`.
 
 ```bash
 git clone https://github.com/vector-im/riot-feature-nag-bot.git
-cd mjolnir
+cd riot-feature-nag-bot
+
+# Build it
+docker build -t feature-nag-bot .
 
 # Copy and edit the config. It is not recommended to change the data path.
 mkdir -p /etc/feature-nag-bot
 cp config/default.yaml /etc/feature-nag-bot/production.yaml
 nano /etc/feature-nag-bot/production.yaml
 
+# Run it
 docker run --rm -it -v /etc/feature-nag-bot:/data feature-nag-bot:latest
 ```
 
