@@ -11,7 +11,7 @@ cd mjolnir
 
 # Copy and edit the config. It is not recommended to change the data path.
 mkdir -p /etc/feature-nag-bot
-cp config/default.yaml /etc/mjolnir/production.yaml
+cp config/default.yaml /etc/feature-nag-bot/production.yaml
 nano /etc/feature-nag-bot/production.yaml
 
 docker run --rm -it -v /etc/feature-nag-bot:/data feature-nag-bot:latest
