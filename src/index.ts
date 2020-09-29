@@ -181,7 +181,7 @@ async function getFeatureBlame(): Promise<any> {
             ref(qualifiedName: "develop") {
                 target {
                     ... on Commit {
-                        blame(path: "src/settings/Settings.js") {
+                        blame(path: "src/settings/Settings.ts") {
                             ranges {
                                 commit {
                                     authoredDate
@@ -206,7 +206,7 @@ async function getFeatureBlame(): Promise<any> {
 async function getSettingsBlob(): Promise<any> {
     return github.query(`{
         repository(name: "matrix-react-sdk", owner: "matrix-org") {
-            object(expression: "develop:src/settings/Settings.js") {
+            object(expression: "develop:src/settings/Settings.ts") {
                 ... on Blob {
                     text
                 }
