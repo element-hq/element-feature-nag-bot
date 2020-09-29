@@ -1,13 +1,13 @@
-# riot-feature-nag-bot
-A Matrix bot that complains when riot-web features take too long
+# element-feature-nag-bot
+A Matrix bot that complains when element-web features take too long
 
 ## Docker (preferred)
 
 Build with `docker build -t feature-nag-bot .`.
 
 ```bash
-git clone https://github.com/vector-im/riot-feature-nag-bot.git
-cd riot-feature-nag-bot
+git clone https://github.com/vector-im/element-feature-nag-bot.git
+cd element-feature-nag-bot
 
 # Build it
 docker build -t feature-nag-bot .
@@ -26,7 +26,7 @@ docker run --rm -it -v /etc/feature-nag-bot:/data feature-nag-bot:latest
 This bot requires `yarn` and Node 10.
 
 ```bash
-git clone https://github.com/vector-im/riot-feature-nag-bot.git
+git clone https://github.com/vector-im/element-feature-nag-bot.git
 cd mjolnir
 
 yarn install
