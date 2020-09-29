@@ -45,6 +45,5 @@ TODO. It's a TypeScript project with a linter.
 
 ## User help
 
-It complains every so often, with some commands to make it work:
-
-![](https://i.imgur.com/zzNu5HA.png)
+It'll mention which features need updates every so often. Ping the bot and say `mute feature_state_counters 600`
+where 600 is the number of days.

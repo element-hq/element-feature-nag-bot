@@ -93,7 +93,7 @@ async function handleCommand(roomId: string, event: any) {
     const args = event['content']['body'].split(' ');
 
     if (args.length > 0) {
-        if (args[1] === 'stfu' && args.length > 2) {
+        if (args[1] === 'mute' && args.length > 2) {
             let muteDays = MUTE_DAYS;
             if (args.length > 3 && Number(args[3])) muteDays = Number(args[3]);
 
@@ -125,7 +125,7 @@ async function handleCommand(roomId: string, event: any) {
 
     // else, show help
     const help = "Help:\n" +
-        "!feature stfu <feature name> [days] - Stop complaining about a feature for this amount of time\n" +
+        "!feature mute <feature name> [days] - Stop complaining about a feature for this amount of time\n" +
         "!feature status - Print current feature statuses\n";
     await client.sendNotice(roomId, help);
 }
