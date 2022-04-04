@@ -62,7 +62,7 @@ async function onTick() {
     for (const feature of features) {
         if (feature.nextPing.isAfter(moment())) continue;
 
-        await client.sendText(noticeRoomId, `Hey team, ${feature.feature} was last modified ${feature.lastModified.fromNow()} by ${feature.author} - what's the plan?`);
+        await client.sendText(noticeRoomId, `Hey team, ${feature.feature} was last modified ${feature.lastModified.fromNow()} by ${feature.author} - what's the plan? No response necessary. The next ping will be in ${DEFAULT_NOTIFICATION_DAYS} days or you can mute for longer with the \`!feature mute ${feature.feature} 30\` command.`);
         await setNextPingDays(feature.feature, DEFAULT_NOTIFICATION_DAYS);
     }
 }
