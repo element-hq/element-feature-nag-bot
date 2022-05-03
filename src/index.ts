@@ -23,6 +23,7 @@ import { Moment } from "moment";
 
 const DEFAULT_NOTIFICATION_DAYS = 28;
 const MUTE_DAYS = 168; // 24 weeks
+const NOTIFY_HOURS = [10, 11, 12, 13, 14, 15, 16]; // UTC
 
 LogService.setLogger(new RichConsoleLogger());
 
@@ -58,6 +59,7 @@ let localpart = null;
 })();
 
 async function onTick() {
+    if (!NOTIFY_HOURS.includes(moment().utc().hour())) return;
     const features = await getFeatureStates();
     for (const feature of features) {
         if (feature.nextPing.isAfter(moment())) continue;
