@@ -15,7 +15,7 @@
     "config": "^3.3.6",
     "js-yaml": "^4.1.0",
     "matrix-bot-sdk": "^0.5.19",
-    "moment": "^2.29.2",
+    "moment": "^2.29.4",
     "node-github-graphql": "^0.2.7"
   },
   "devDependencies": {
